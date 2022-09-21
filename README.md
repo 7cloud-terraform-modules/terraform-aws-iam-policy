@@ -5,34 +5,34 @@ Iam Policy Module
 
 ```hcl
 module iam_policy_cloudwatch_disable {
-    source = "./"
-    POLICY_ACTION = [
-                "logs:CreateLogGroup",
-                "logs:CreateLogStream",
-                "logs:PutLogEvents"
-            ]
-    POLICY_EFFECT = "Deny"
-    POLICY_RESOURCE = ["arn:aws:logs:*:*:*"]
-    POLICY_NAME = "cloudwatch-disable"
+    source             = "./"
+    POLICY_ACTION      = [
+                          "logs:CreateLogGroup",
+                          "logs:CreateLogStream",
+                          "logs:PutLogEvents"
+                         ]
+    POLICY_EFFECT      = "Deny"
+    POLICY_RESOURCE    = ["arn:aws:logs:*:*:*"]
+    POLICY_NAME        = "cloudwatch-disable"
     POLICY_DESCRIPTION = "A policy to disable cloudwatch creation of log groups and log event creation"
-    NAME_PREFIX = null
-    PATH        = null
+    NAME_PREFIX        = null
+    PATH               = null
 }
 
 module "iam_policy_bucket_allow" {
-    source = "./"
-    POLICY_ACTION = [
-                "s3:*"
-            ]
-    POLICY_EFFECT = "Allow"
-    POLICY_RESOURCE = [
-            "${aws_s3_bucket.example_bucket.arn}",
-            "${aws_s3_bucket.example_bucket.arn}/*"
-    ]
-    POLICY_NAME = "bucket-access"
+    source             = "./"
+    POLICY_ACTION      = [
+                            "s3:*"
+                         ]
+    POLICY_EFFECT      = "Allow"
+    POLICY_RESOURCE    = [
+                            "${aws_s3_bucket.example_bucket.arn}",
+                            "${aws_s3_bucket.example_bucket.arn}/*"
+                         ]
+    POLICY_NAME        = "bucket-access"
     POLICY_DESCRIPTION = "A policy to access a bucket"
-    NAME_PREFIX = null
-    PATH        = null
+    NAME_PREFIX        = null
+    PATH               = null
 }
 ```
 
