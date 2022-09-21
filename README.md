@@ -1,5 +1,9 @@
-# IamPolicyModule
-Iam Policy Module
+# Iam Policy Module by 7Clouds
+Thank you for riding with us! Feel free to download or reference this respository in your terraform projects and studies  
+
+This module is a part of our product SCA - An automated __API__ and __Serverless Infrastructure__ generator that can reduce your API development time by 40-60% and automate your deployments up to 90%! Check it out at https://seventechnologies.cloud/
+
+Please rank this repo 5 starts if you like our job!
 
 ## Usage
 
